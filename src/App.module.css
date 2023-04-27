@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+body {
+  max-width: 300px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* HEADER */
+.headerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/* BALANCE */
+.balanceBox {
+  margin-bottom: 10px;
+}
+
+.balanceText {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.balance {
+  font-weight: 500;
+}
+
+/* DISPLAY */
+.displayBox {
+  height: 90px;
+  border: 1px solid #8888883b;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+}
+
+.incomeBox,
+.expenseBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-items: center;
+}
+
+.incomeText,
+.expenseText {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.income,
+.expense {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.income {
+  color: lightgreen;
+}
+
+.expense {
+  color: tomato;
+}
+
+/* HISTORY */
+.historyBox {
+  margin-bottom: 30px;
+}
+
+.historyText {
+  font-weight: 600;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(48, 48, 48, 0.317);
+}
+
+/* TRANSACTION */
+.transactionBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  border-right: 5px solid rgb(20, 255, 20);
+  text-transform: capitalize;
+  font-size: 13px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.246);
+}
+
+/* FORM */
+.formBox {
+  margin-bottom: 30px;
+}
+
+.formHeader {
+  text-transform: capitalize;
+  font-weight: 600;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(48, 48, 48, 0.317);
+}
+
+.formText,
+.formAmount {
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.formAmount {
+  margin: 0;
+}
+.input {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.input::placeholder {
+  text-transform: capitalize;
+}
+
+.formParagraph {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.addBtn {
+  width: 100%;
+  height: 35px;
+  background-color: rgb(164, 125, 241);
+  text-transform: capitalize;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}

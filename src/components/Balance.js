@@ -1,11 +1,24 @@
 import React from "react";
 import styles from "../App.module.css";
 
-export default function Balance() {
+export default function Balance({ list, balance, setBalance }) {
+  let value = [];
+
+  list.map((el) => {
+    return value.push(+el.amount);
+  });
+
+  const total = value.reduce((p, c) => {
+    p = p + c;
+    return p;
+  }, 0);
+
+  setBalance(total);
+
   return (
-    <>
-      <h4>Your balance</h4>
-      <h1 id="balance">$0.00</h1>
-    </>
+    <div className={styles.balanceBox}>
+      <h4 className={styles.balanceText}>Your balance</h4>
+      <h1 className={styles.balance}>${balance}</h1>
+    </div>
   );
 }
