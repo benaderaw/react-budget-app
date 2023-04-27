@@ -24,13 +24,29 @@ export default function Display({ list }) {
 
   return (
     <div className={styles.displayBox}>
+      <div className={styles.displayDivider}></div>
       <div className={styles.incomeBox}>
         <h4 className={styles.incomeText}>Income</h4>
-        <p className={styles.income}>${income}</p>
+        <p className={styles.income}>
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(income)}
+        </p>
       </div>
+
       <div className={styles.expenseBox}>
         <h4 className={styles.expenseText}>Expense</h4>
-        <p className={styles.expense}>${expense}</p>
+        <p className={styles.expense}>
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          })
+            .format(expense)
+            .toString()
+            .split("-")
+            .join("")}
+        </p>
       </div>
     </div>
   );

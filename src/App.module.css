@@ -9,7 +9,7 @@
 body {
   max-width: 300px;
   margin: 0 auto;
-  color: #444;
+  color: #505050;
 }
 
 /* HEADER */
@@ -29,7 +29,7 @@ body {
 
 /* BALANCE */
 .balanceBox {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .balanceText {
@@ -44,6 +44,7 @@ body {
 
 /* DISPLAY */
 .displayBox {
+  position: relative;
   height: 90px;
   border: 1px solid #8888883b;
   text-transform: uppercase;
@@ -53,6 +54,16 @@ body {
   grid-template-columns: 1fr 1fr;
   align-content: center;
   justify-items: center;
+}
+
+.displayDivider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1px;
+  height: 50px;
+  background-color: #8888883b;
 }
 
 .incomeBox,
@@ -105,6 +116,20 @@ body {
   padding-right: 20px;
   margin-bottom: 10px;
   border-right: 5px solid rgb(20, 255, 20);
+  text-transform: capitalize;
+  font-size: 13px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.246);
+}
+
+.transactionBox02 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  border-right: 5px solid rgb(255, 20, 20);
   text-transform: capitalize;
   font-size: 13px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.246);

@@ -7,7 +7,9 @@ export default function Form({ details, setDetails, list, setList }) {
   const amountRef = useRef();
 
   const handelChange = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+
+    if (!isFinite(amountRef.current.value)) return;
 
     setDetails((prev) => {
       return { ...prev, [name]: value };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../App.module.css";
 
 export default function Balance({ list, balance, setBalance }) {
@@ -13,12 +13,19 @@ export default function Balance({ list, balance, setBalance }) {
     return p;
   }, 0);
 
-  setBalance(total);
+  useEffect(() => {
+    setBalance(total);
+  }, [list, balance, setBalance, total]);
 
   return (
     <div className={styles.balanceBox}>
       <h4 className={styles.balanceText}>Your balance</h4>
-      <h1 className={styles.balance}>${balance}</h1>
+      <h1 className={styles.balance}>
+        {new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+        }).format(balance)}
+      </h1>
     </div>
   );
 }
